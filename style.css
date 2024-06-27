@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #fff;
+  --text-time: #323238;
+  --button-aside: #e1e1e6;
+  --button-forest: #089027;
+  --button-rain: #02799d;
+  --button-coffee: #8b4513;
+  --button-fire: #ff8c00;
+}
+
+.sr-only {
+  width: 2px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-time);
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+#app {
+  display: flex;
+  gap: 18rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+#timer {
+  font-size: 13rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+#controls {
+  margin-top: 1rem;
+  gap: 3rem;
+  border-radius: 999rem;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  color: var(--text-time);
+  cursor: pointer;
+  font-size: 5.2rem;
+}
+
+aside {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+aside button {
+  background-color: var(--button-aside);
+  border-radius: 2rem;
+  height: 12rem;
+  width: 10rem;
+  font-size: 5.2rem;
+}
+
+aside button:hover {
+  background-color: #61616b;
+}
+
+#controls button:hover {
+  transform: scale(1.1);
+}
+
+.running .ph-play-circle,
+.running .ph-timer,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle {
+  display: none;
+}
